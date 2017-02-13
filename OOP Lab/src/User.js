@@ -3,7 +3,6 @@
 
  */
 
-
 function User (theFName, theLName, theEmail) {
   this.Fname = theFName;
   this.LName = theLName;
