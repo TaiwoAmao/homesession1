@@ -24,6 +24,13 @@
 
     });
 
+    it("The getFullName method should return a both First Name and Last Name", function() {
+
+      var Trader = new User("Sola", "Dele", "jax@gg.com");
+      expect(Trader.getFullName()).toEqual("Sola Dele");
+
+    });
+
     it("ChangeEmail should return new Email", function(){
 
       var Expertuser = new User("Bill", "Gates", "bill@gmail.com");
@@ -31,5 +38,17 @@
 
     })
 
+    it("ChangeEmail should return new Email", function(){
+
+      var Expertuser = new User("Steve", "Jobs", "steve@apple.com");
+      expect(Expertuser.changeEmail("stevejobs@apple.com")).toEqual("New Email Saved: " + "stevejobs@apple.com");
+
+    })
+
+    it("Accessing First Name and Last Name property", function() {
+      var Parent  = new User('Amos', 'Nanfe', 'amos@yahoo.com');
+      expect(Parent.Fname).toBe('Amos');
+      expect(Parent.LName).toBe('Nanfe');
+    });
   });
 })();
